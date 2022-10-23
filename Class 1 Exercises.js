@@ -18,11 +18,22 @@ let smallPizzaArea = Math.PI *(smallPizza/2)**2;
 let largePizzaArea = Math.PI *(largePizza/2)**2;
 
 //display the results to console with just limit to 2 decimal places
-console.log('The area for a ' + smallPizza + ' inches pizza is ' + smallPizzaArea.toFixed(2) + ' sq inches');
-console.log('The area for a ' + largePizza + ' inches pizza is ' + largePizzaArea.toFixed(2) + ' sq inches');
+console.log('The area of a ' + smallPizza + ' inches pizza is ' + smallPizzaArea.toFixed(2) + ' sq inches');
+console.log('The area of a ' + largePizza + ' inches pizza is ' + largePizzaArea.toFixed(2) + ' sq inches');
 
 // 2. What is the cost per square inch of each pizza?
 
+//define the variables for the cost of each type of pizzas 
+let smallPizzaCost = 16.99;
+let largePizzaCost = 19.99;
+
+//calculate the cost per square inche for each type of pizzas
+smallPizzaCostPerSq = smallPizzaCost/smallPizzaArea;
+largePizzaCostPerSq = largePizzaCost/largePizzaArea;
+
+//display the results to console with just limit to 2 decimal places
+console.log('The cost per square inche of a ' + smallPizza + ' inches pizza is ' + smallPizzaCostPerSq .toFixed(2) + ' dollars');
+console.log('The cost per square inche of a ' + largePizza + ' inches pizza is ' + largePizzaCostPerSq.toFixed(2) + ' dollars');
 
 // 3. Using the Math object, put together a code snippet
 // that allows you to draw a random card with a value
