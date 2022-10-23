@@ -1,11 +1,25 @@
 /**
+ * Cecilia Tong
+ * Class 1 Exercise
+ * Oct 18, 2022
+ */
+
+/**
  * MATH
  */
 
 // 1. Pagliacci charges $16.99 for a 13” pizza and $19.99 for a 17” pizza.
 // What is the area for each of these pizzas?
 // (radius would be the listed size - i.e. 13" - divided by 2)
+//define the variables for each type of pizzas and its area
+let smallPizza = 13;
+let largePizza = 17;
+let smallPizzaArea = Math.PI *(smallPizza/2)**2;
+let largePizzaArea = Math.PI *(largePizza/2)**2;
 
+//display the results to console with just limit to 2 decimal places
+console.log('The area for a ' + smallPizza + ' inches pizza is ' + smallPizzaArea.toFixed(2) + ' sq inches');
+console.log('The area for a ' + largePizza + ' inches pizza is ' + largePizzaArea.toFixed(2) + ' sq inches');
 
 // 2. What is the cost per square inch of each pizza?
 
