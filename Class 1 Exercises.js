@@ -6,34 +6,38 @@
 
 /**
  * MATH
- */
+ **/
 
 // 1. Pagliacci charges $16.99 for a 13” pizza and $19.99 for a 17” pizza.
 // What is the area for each of these pizzas?
 // (radius would be the listed size - i.e. 13" - divided by 2)
-//define the variables for each type of pizzas and its area
-let smallPizza = 13;
-let largePizza = 17;
-let smallPizzaArea = Math.PI *(smallPizza/2)**2;
-let largePizzaArea = Math.PI *(largePizza/2)**2;
 
-//display the results to console with just limit to 2 decimal places
-console.log('The area of a ' + smallPizza + ' inches pizza is ' + smallPizzaArea.toFixed(2) + ' sq inches');
-console.log('The area of a ' + largePizza + ' inches pizza is ' + largePizzaArea.toFixed(2) + ' sq inches');
+//define the variables for each type of pizzas 
+let smallPizza = 13; //small pizza is 13in
+let largePizza = 17; //large pizza is 17in
+
+//calculate the area of each type of pizzas
+const smallPizzaArea = Math.PI *(smallPizza/2)**2;
+const largePizzaArea = Math.PI *(largePizza/2)**2;
+
+//display the area of each type of pizzas to console, limit to 2 decimal places
+console.log('\n** MATH PROBLEM **');
+console.log(`The area of a ${smallPizza}in pizza is ${smallPizzaArea.toFixed(2)} sq. inches`);
+console.log(`The area of a ${largePizza}in pizza is ${largePizzaArea.toFixed(2)} sq. inches`);
 
 // 2. What is the cost per square inch of each pizza?
 
 //define the variables for the cost of each type of pizzas 
-let smallPizzaCost = 16.99;
-let largePizzaCost = 19.99;
+let smallPizzaCost = 16.99; //$16.99 for the small pizza
+let largePizzaCost = 19.99; //$19.99 for the large pizza
 
 //calculate the cost per square inche for each type of pizzas
-smallPizzaCostPerSq = smallPizzaCost/smallPizzaArea;
-largePizzaCostPerSq = largePizzaCost/largePizzaArea;
+const smallPizzaCostPerSq = smallPizzaCost/smallPizzaArea;
+const largePizzaCostPerSq = largePizzaCost/largePizzaArea;
 
-//display the results to console with just limit to 2 decimal places
-console.log('The cost per square inche of a ' + smallPizza + ' inches pizza is ' + smallPizzaCostPerSq .toFixed(2) + ' dollars');
-console.log('The cost per square inche of a ' + largePizza + ' inches pizza is ' + largePizzaCostPerSq.toFixed(2) + ' dollars');
+//display the cost per square inche for each type of pizzas to console, limit to 2 decimal places
+console.log(`If cost for a ${smallPizza}in pizza is $${smallPizzaCost}, then the cost per sq. inche of the ${smallPizza}in pizza is ${smallPizzaCostPerSq .toFixed(2)} dollars`);
+console.log(`If cost for a ${largePizza}in pizza is $${largePizzaCost}, then the cost per sq. inche of the ${largePizza}in pizza is ${largePizzaCostPerSq .toFixed(2)} dollars`);
 
 // 3. Using the Math object, put together a code snippet
 // that allows you to draw a random card with a value
