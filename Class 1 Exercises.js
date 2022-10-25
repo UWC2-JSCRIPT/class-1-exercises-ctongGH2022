@@ -43,10 +43,32 @@ console.log(`If cost for a ${largePizza}in pizza is $${largePizzaCost}, then the
 // that allows you to draw a random card with a value
 // between 1 and 13 (assume ace is 1, jack is 11…)
 
+//define the const and variables for card (min and max)
+let minValueOfCard = 1;
+let maxValueOfCard = 13;
+
+//use Math.random() to draw cards of values between 1 & 13 
+//& use Math.ceil() to round upwards to the nearest integer
+const card = Math.ceil(Math.random() * maxValueOfCard);
 
 // 4. Draw 3 cards and use Math to determine the highest
 // card
 
+//define the variable of the highest card, starting from the minimum value
+let highestCard = minValueOfCard;
+
+//draw 3 cards and determine the highest card
+console.log('\n');
+for (let i = 1; i <= 3; i++) {
+    const card = Math.ceil(Math.random() * maxValueOfCard);
+    console.log(`The value of card #${i} is ${card}`);
+    //use Math.max to find the highest card
+    if (Math.max(highestCard, card) > highestCard){
+        highestCard = card;
+    }
+}
+//display the hightest card value to console
+ console.log(`The highest card is ${highestCard}`);
 
 /**
  * ADDRESS LINE
