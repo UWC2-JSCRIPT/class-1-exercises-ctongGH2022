@@ -128,4 +128,15 @@ console.log(`The extracted string is ${strToBeExtVar}`);
 // Look online for documentation on Date objects.
 
 // Starting hint:
-const endDate = new Date(2019, 3, 1);
+// const endDate = new Date(2019, 3, 1);
+
+//define variable for start date and end date
+const startDate = new Date(2020, 0, 1); // 1/1/2020 00:00:00
+const endDate = new Date(2020, 3, 1);   // 4/1/2020 00:00:00
+
+//determine midle date
+midleDate = new Date((startDate.getTime() + endDate.getTime())/2);
+
+//display result of midle date to console
+console.log('\n** DATE PROBLEM **');
+console.log(`The middle date (and time) between 1/1/2020 00:00:00 and 4/1/2020 00:00:00 is ${midleDate}`);
