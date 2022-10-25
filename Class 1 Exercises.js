@@ -72,13 +72,26 @@ for (let i = 1; i <= 3; i++) {
 
 /**
  * ADDRESS LINE
- */
+ **/
 
 // 1. Create variables for firstName, lastName,
 // streetAddress, city, state, and zipCode. Use
 // this information to create a formatted address block
 // that could be printed onto an envelope.
 
+//create variables for address line
+let firstName = 'Maria';
+let lastName = 'Do';
+let streetAddress = '1700 Ave. SE.';
+let city = 'Seattle';
+let state = 'WA';
+let zipCode = '98146';
+
+//display the address block
+console.log('\n** ADDRESS LINE PROBLEM **');
+let adxBlock = `The address block is as below: 
+${firstName} ${lastName} \n${streetAddress} \n${city}, ${state} ${zipCode}\n`;
+console.log(adxBlock);       
 
 // 2. You are given a string in this format:
 // firstName lastName(assume no spaces in either)
@@ -88,10 +101,27 @@ for (let i = 1; i <= 3; i++) {
 // Write code that is able to extract the first name from this string into a variable.
 // Hint: use indexOf, slice, and / or substring
 
+//display the given string on the console
+let givenString = `firstName lastName \nstreetAddress \ncity, state zip`;    
+console.log(`\nThe following string is given in the format below: \n${givenString}`);    
+
+//define variable for the string to be extracted, and find the position of its first char
+let strToBeExt = "firstName"; 
+let firstCharPos = givenString.indexOf(strToBeExt); 
+
+//find the length of the string to be extracted 
+//(Notes: I want to create the code in a general way so I can extract any part of any given string)
+let strToBeExtLength = strToBeExt.length; 
+
+//use string.substr() to extract the first name from the given string into variable strToBeExtVar
+let strToBeExtVar = givenString.substr(firstCharPos,strToBeExtLength);
+
+//display the extracted string to the console
+console.log(`The extracted string is ${strToBeExtVar}`);
 
 /**
  * FIND THE MIDDLE DATE
- */
+ **/
 // On your own find the middle date(and time) between the following two dates:
 // 1/1/2020 00:00:00 and 4/1/2020 00:00:00
 //
